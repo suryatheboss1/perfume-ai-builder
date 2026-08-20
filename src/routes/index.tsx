@@ -59,15 +59,15 @@ function Index() {
             New from Sarkar Perfume
           </p>
           <h1 className="mt-5 font-display text-5xl leading-[1.05] md:text-7xl">
-            <span className="text-gold">Oud Aura</span>
+            <span className="text-gold">Sovereign</span>
           </h1>
           <p className="mt-4 font-display text-2xl italic text-muted-foreground md:text-3xl">
             Smoke, saffron and the last hour of a wedding night.
           </p>
           <p className="mt-6 max-w-md text-sm leading-relaxed text-muted-foreground">
             An extrait built around Assam oud and Kashmiri saffron, softened with bergamot so it
-            opens bright and closes dark. The same Sarkar bottle you already know, with a new soul
-            inside.
+            opens bright and closes dark. Presented in the same chess-king flacon as Noble, Orion
+            and Regal, in a deep amber glass. The packaging is untouched; only the perfume is new.
           </p>
           <div className="mt-9 flex flex-wrap items-center gap-4">
             <a
@@ -86,10 +86,10 @@ function Index() {
         </div>
         <img
           src={heroBottle}
-          alt="Oud Aura extrait de parfum bottle on dark stone with oud wood and dried citrus"
-          width={1280}
-          height={1600}
-          className="mx-auto w-full max-w-sm rounded-2xl border border-border object-cover shadow-[var(--shadow-glow)]"
+          alt="Sarkar Sovereign perfume in the signature amber chess-king flacon with SARKAR on the base"
+          width={1024}
+          height={1024}
+          className="mx-auto w-full max-w-md object-contain drop-shadow-[var(--shadow-glow)]"
         />
       </section>
       <section className="border-y border-border bg-card">
@@ -107,7 +107,7 @@ function Index() {
       <section id="notes" className="mx-auto max-w-6xl px-6 py-16 md:py-24">
         <h2 className="font-display text-4xl md:text-5xl">The fragrance pyramid</h2>
         <p className="mt-3 max-w-lg text-sm text-muted-foreground">
-          Three movements, twelve hours. Oud Aura is blended to bloom slowly on skin rather than
+          Three movements, twelve hours. Sovereign is blended to bloom slowly on skin rather than
           shout on first spray.
         </p>
         <div className="mt-12 grid gap-10 md:grid-cols-2 md:items-center">
@@ -129,9 +129,9 @@ function Index() {
           </ol>
           <img
             src={notesImage}
-            alt="Oud wood, bergamot slices, saffron threads and dried rose petals on dark slate"
+            alt="Oud wood, bergamot, saffron threads, amber resin and dried rose petals laid out in a row"
             width={1280}
-            height={860}
+            height={864}
             loading="lazy"
             className="rounded-2xl border border-border object-cover"
           />
@@ -157,7 +157,7 @@ function Index() {
             href="https://sarkar.store/"
             className="mt-10 inline-block rounded-full bg-primary px-10 py-4 text-sm font-medium uppercase tracking-[0.15em] text-primary-foreground transition-opacity hover:opacity-90"
           >
-            Order Oud Aura
+            Order Sovereign
           </a>
         </div>
       </section>
@@ -167,7 +167,7 @@ function Index() {
           <a href="https://sarkar.store/" className="hover:text-primary">
             sarkar.store
           </a>
-          <span>Student concept project - Oud Aura</span>
+          <span>Student concept project - Sarkar Sovereign</span>
         </div>
       </footer>
     </main>
