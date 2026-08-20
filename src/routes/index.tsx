@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroBottle from "@/assets/hero-bottle.jpg";
 import notesImage from "@/assets/notes.jpg";
+import knightBottle from "@/assets/knight-bottle.jpg";
+import queenBottle from "@/assets/queen-bottle.jpg";
 
 const TITLE = "Sarkar Sovereign | Oud & Saffron Extrait de Parfum";
 const DESCRIPTION =
@@ -35,6 +37,36 @@ const proof = [
   { label: "Longevity", value: "10-12 hrs" },
   { label: "Sillage", value: "Moderate-heavy" },
   { label: "Best for", value: "Evening, winter" },
+];
+
+const collection = [
+  {
+    name: "Sarkar Sovereign",
+    piece: "King",
+    image: heroBottle,
+    tagline: "Smoke, saffron and the last hour of a wedding night.",
+    notes: "Bergamot - Kashmiri saffron - Assam oud",
+    price: "Rs 2,450",
+    alt: "Sarkar Sovereign perfume in the amber chess-king flacon",
+  },
+  {
+    name: "Sarkar Knight",
+    piece: "Knight",
+    image: knightBottle,
+    tagline: "Cold air, cut grass and leather gloves at dawn.",
+    notes: "Grapefruit - vetiver & violet leaf - cedar, leather, smoked incense",
+    price: "Rs 2,250",
+    alt: "Sarkar Knight perfume in a smoky green-grey chess-knight flacon with a silver collar",
+  },
+  {
+    name: "Sarkar Queen",
+    piece: "Queen",
+    image: queenBottle,
+    tagline: "Rose held over sandalwood, never raising her voice.",
+    notes: "Lychee & mandarin - Taif rose, jasmine, peony - sandalwood, white musk, vanilla",
+    price: "Rs 2,350",
+    alt: "Sarkar Queen perfume in a blush-rose chess-queen flacon with a gold collar",
+  },
 ];
 
 function Index() {
@@ -135,6 +167,52 @@ function Index() {
             loading="lazy"
             className="rounded-2xl border border-border object-cover"
           />
+        </div>
+      </section>
+      <section id="collection" className="border-t border-border">
+        <div className="mx-auto max-w-6xl px-6 py-16 md:py-24">
+          <h2 className="font-display text-4xl md:text-5xl">The chess set</h2>
+          <p className="mt-3 max-w-lg text-sm text-muted-foreground">
+            Three scents, three pieces, one shelf. Same Sarkar flacon and packaging - only the
+            juice inside changes.
+          </p>
+          <div className="mt-12 grid gap-8 md:grid-cols-3">
+            {collection.map((item) => (
+              <article
+                key={item.name}
+                className="flex flex-col rounded-2xl border border-border bg-card p-6"
+              >
+                <img
+                  src={item.image}
+                  alt={item.alt}
+                  width={1024}
+                  height={1024}
+                  loading="lazy"
+                  className="mx-auto h-56 w-full object-contain"
+                />
+                <p className="mt-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">
+                  {item.piece}
+                </p>
+                <h3 className="mt-2 font-display text-2xl text-primary">{item.name}</h3>
+                <p className="mt-2 font-display text-lg italic text-muted-foreground">
+                  {item.tagline}
+                </p>
+                <p className="mt-4 text-sm leading-relaxed text-muted-foreground">{item.notes}</p>
+                <div className="mt-6 flex items-center justify-between border-t border-border pt-5">
+                  <span className="font-display text-2xl text-primary">{item.price}</span>
+                  <span className="text-xs uppercase tracking-[0.15em] text-muted-foreground">
+                    50 ml
+                  </span>
+                </div>
+                <a
+                  href="#buy"
+                  className="mt-5 rounded-full border border-border px-6 py-3 text-center text-xs uppercase tracking-[0.2em] text-muted-foreground transition-colors hover:border-primary hover:text-primary"
+                >
+                  Add to cart
+                </a>
+              </article>
+            ))}
+          </div>
         </div>
       </section>
       <section id="buy" className="border-t border-border bg-card">
