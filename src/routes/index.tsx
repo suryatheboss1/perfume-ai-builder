@@ -2,9 +2,9 @@ import { createFileRoute } from "@tanstack/react-router";
 import heroBottle from "@/assets/hero-bottle.jpg";
 import notesImage from "@/assets/notes.jpg";
 
-const TITLE = "Oud Aura by Sarkar Perfume | Smoky Oud & Saffron Extrait";
+const TITLE = "Sarkar Sovereign | Oud & Saffron Extrait de Parfum";
 const DESCRIPTION =
-  "Oud Aura is Sarkar Perfume's new extrait de parfum: bergamot, saffron and Assam oud with a 12-hour trail. 50ml for Rs 2,450 with free shipping in India.";
+  "Sovereign is the newest fragrance in the Sarkar chess-king flacon: bergamot, Kashmiri saffron and Assam oud with a 12-hour trail. 50ml for Rs 2,450, free shipping in India.";
 
 export const Route = createFileRoute("/")({
   head: () => ({
