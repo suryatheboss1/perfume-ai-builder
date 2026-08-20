@@ -171,7 +171,6 @@ function Index() {
       </section>
       <section id="buy" className="border-t border-border bg-card">
         <div className="mx-auto max-w-3xl px-6 py-16 text-center md:py-24">
-          {" "}
           <h2 className="font-display text-4xl md:text-5xl">
             Launch price, <span className="text-gold">first 200 bottles</span>
           </h2>
