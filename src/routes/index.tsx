@@ -1,6 +1,8 @@
 import { createFileRoute } from "@tanstack/react-router";
 import heroBottle from "@/assets/hero-bottle.jpg";
 import notesImage from "@/assets/notes.jpg";
+import knightBottle from "@/assets/knight-bottle.jpg";
+import queenBottle from "@/assets/queen-bottle.jpg";
 
 const TITLE = "Sarkar Sovereign | Oud & Saffron Extrait de Parfum";
 const DESCRIPTION =
@@ -35,6 +37,36 @@ const proof = [
   { label: "Longevity", value: "10-12 hrs" },
   { label: "Sillage", value: "Moderate-heavy" },
   { label: "Best for", value: "Evening, winter" },
+];
+
+const collection = [
+  {
+    name: "Sarkar Sovereign",
+    piece: "King",
+    image: heroBottle,
+    tagline: "Smoke, saffron and the last hour of a wedding night.",
+    notes: "Bergamot - Kashmiri saffron - Assam oud",
+    price: "Rs 2,450",
+    alt: "Sarkar Sovereign perfume in the amber chess-king flacon",
+  },
+  {
+    name: "Sarkar Knight",
+    piece: "Knight",
+    image: knightBottle,
+    tagline: "Cold air, cut grass and leather gloves at dawn.",
+    notes: "Grapefruit - vetiver & violet leaf - cedar, leather, smoked incense",
+    price: "Rs 2,250",
+    alt: "Sarkar Knight perfume in a smoky green-grey chess-knight flacon with a silver collar",
+  },
+  {
+    name: "Sarkar Queen",
+    piece: "Queen",
+    image: queenBottle,
+    tagline: "Rose held over sandalwood, never raising her voice.",
+    notes: "Lychee & mandarin - Taif rose, jasmine, peony - sandalwood, white musk, vanilla",
+    price: "Rs 2,350",
+    alt: "Sarkar Queen perfume in a blush-rose chess-queen flacon with a gold collar",
+  },
 ];
 
 function Index() {
