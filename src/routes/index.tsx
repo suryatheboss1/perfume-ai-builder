@@ -137,12 +137,17 @@ function Index() {
           </div>
         </div>
         <img
-          src={heroBottle}
+          src={heroBottleFallback}
+          srcSet={heroBottle}
+          sizes="(max-width: 768px) 90vw, 448px"
           alt="Sarkar Sovereign perfume in the signature amber chess-king flacon with SARKAR on the base"
-          width={1024}
-          height={1024}
+          width={768}
+          height={768}
+          fetchPriority="high"
+          decoding="async"
           className="mx-auto w-full max-w-md object-contain drop-shadow-[var(--shadow-glow)]"
         />
+
       </section>
       <section className="border-y border-border bg-card">
         <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-y-8 px-6 py-10 md:grid-cols-4">
