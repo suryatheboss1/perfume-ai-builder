@@ -23,7 +23,18 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "product" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: heroBottleFallback,
+        imageSrcSet: heroBottle,
+        imageSizes: "(max-width: 768px) 90vw, 448px",
+        fetchpriority: "high",
+      },
+    ],
   }),
+
   component: Index,
 });
 
