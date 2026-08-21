@@ -1,8 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroBottle from "@/assets/hero-bottle.jpg";
-import notesImage from "@/assets/notes.jpg";
-import knightBottle from "@/assets/knight-bottle.jpg";
-import queenBottle from "@/assets/queen-bottle.jpg";
+import heroBottle from "@/assets/hero-bottle.jpg?w=480;768&format=webp&quality=72&as=srcset";
+import heroBottleFallback from "@/assets/hero-bottle.jpg?w=768&format=webp&quality=72";
+import notesImage from "@/assets/notes.jpg?w=480;800&format=webp&quality=70&as=srcset";
+import notesFallback from "@/assets/notes.jpg?w=800&format=webp&quality=70";
+import knightBottle from "@/assets/knight-bottle.jpg?w=360;600&format=webp&quality=70&as=srcset";
+import knightFallback from "@/assets/knight-bottle.jpg?w=600&format=webp&quality=70";
+import queenBottle from "@/assets/queen-bottle.jpg?w=360;600&format=webp&quality=70&as=srcset";
+import queenFallback from "@/assets/queen-bottle.jpg?w=600&format=webp&quality=70";
+
 
 const TITLE = "Sarkar Sovereign | Oud & Saffron Extrait de Parfum";
 const DESCRIPTION =
