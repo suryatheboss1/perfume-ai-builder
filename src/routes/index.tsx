@@ -30,7 +30,7 @@ export const Route = createFileRoute("/")({
         href: heroBottleFallback,
         imageSrcSet: heroBottle,
         imageSizes: "(max-width: 768px) 90vw, 448px",
-        fetchpriority: "high",
+        fetchPriority: "high",
       },
     ],
   }),
