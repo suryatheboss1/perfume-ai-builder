@@ -142,7 +142,6 @@ function Index() {
           alt="Sarkar Sovereign perfume in the signature amber chess-king flacon with SARKAR on the base"
           width={768}
           height={768}
-          fetchPriority="high"
           decoding="async"
           className="mx-auto w-full max-w-md object-contain drop-shadow-[var(--shadow-glow)]"
         />
