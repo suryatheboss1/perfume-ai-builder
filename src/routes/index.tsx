@@ -180,13 +180,17 @@ function Index() {
             ))}
           </ol>
           <img
-            src={notesImage}
+            src={notesFallback}
+            srcSet={notesImage}
+            sizes="(max-width: 768px) 90vw, 560px"
             alt="Oud wood, bergamot, saffron threads, amber resin and dried rose petals laid out in a row"
-            width={1280}
-            height={864}
+            width={800}
+            height={540}
             loading="lazy"
+            decoding="async"
             className="rounded-2xl border border-border object-cover"
           />
+
         </div>
       </section>
       <section id="collection" className="border-t border-border">
