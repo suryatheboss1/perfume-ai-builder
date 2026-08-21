@@ -1,8 +1,13 @@
 import { createFileRoute } from "@tanstack/react-router";
-import heroBottle from "@/assets/hero-bottle.jpg";
-import notesImage from "@/assets/notes.jpg";
-import knightBottle from "@/assets/knight-bottle.jpg";
-import queenBottle from "@/assets/queen-bottle.jpg";
+import heroBottle from "@/assets/hero-bottle.jpg?w=480;768&format=webp&quality=72&as=srcset";
+import heroBottleFallback from "@/assets/hero-bottle.jpg?w=768&format=webp&quality=72";
+import notesImage from "@/assets/notes.jpg?w=480;800&format=webp&quality=70&as=srcset";
+import notesFallback from "@/assets/notes.jpg?w=800&format=webp&quality=70";
+import knightBottle from "@/assets/knight-bottle.jpg?w=360;600&format=webp&quality=70&as=srcset";
+import knightFallback from "@/assets/knight-bottle.jpg?w=600&format=webp&quality=70";
+import queenBottle from "@/assets/queen-bottle.jpg?w=360;600&format=webp&quality=70&as=srcset";
+import queenFallback from "@/assets/queen-bottle.jpg?w=600&format=webp&quality=70";
+
 
 const TITLE = "Sarkar Sovereign | Oud & Saffron Extrait de Parfum";
 const DESCRIPTION =
@@ -18,7 +23,17 @@ export const Route = createFileRoute("/")({
       { property: "og:type", content: "product" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
+    links: [
+      {
+        rel: "preload",
+        as: "image",
+        href: heroBottleFallback,
+        imageSrcSet: heroBottle,
+        imageSizes: "(max-width: 768px) 90vw, 448px",
+      },
+    ],
   }),
+
   component: Index,
 });
 
@@ -43,7 +58,8 @@ const collection = [
   {
     name: "Sarkar Sovereign",
     piece: "King",
-    image: heroBottle,
+    srcSet: heroBottle,
+    src: heroBottleFallback,
     tagline: "Smoke, saffron and the last hour of a wedding night.",
     notes: "Bergamot - Kashmiri saffron - Assam oud",
     price: "Rs 2,450",
@@ -52,7 +68,8 @@ const collection = [
   {
     name: "Sarkar Knight",
     piece: "Knight",
-    image: knightBottle,
+    srcSet: knightBottle,
+    src: knightFallback,
     tagline: "Cold air, cut grass and leather gloves at dawn.",
     notes: "Grapefruit - vetiver & violet leaf - cedar, leather, smoked incense",
     price: "Rs 2,250",
@@ -61,13 +78,15 @@ const collection = [
   {
     name: "Sarkar Queen",
     piece: "Queen",
-    image: queenBottle,
+    srcSet: queenBottle,
+    src: queenFallback,
     tagline: "Rose held over sandalwood, never raising her voice.",
     notes: "Lychee & mandarin - Taif rose, jasmine, peony - sandalwood, white musk, vanilla",
     price: "Rs 2,350",
     alt: "Sarkar Queen perfume in a blush-rose chess-queen flacon with a gold collar",
   },
 ];
+
 
 function Index() {
   return (
@@ -117,12 +136,16 @@ function Index() {
           </div>
         </div>
         <img
-          src={heroBottle}
+          src={heroBottleFallback}
+          srcSet={heroBottle}
+          sizes="(max-width: 768px) 90vw, 448px"
           alt="Sarkar Sovereign perfume in the signature amber chess-king flacon with SARKAR on the base"
-          width={1024}
-          height={1024}
+          width={768}
+          height={768}
+          decoding="async"
           className="mx-auto w-full max-w-md object-contain drop-shadow-[var(--shadow-glow)]"
         />
+
       </section>
       <section className="border-y border-border bg-card">
         <dl className="mx-auto grid max-w-6xl grid-cols-2 gap-y-8 px-6 py-10 md:grid-cols-4">
@@ -160,13 +183,17 @@ function Index() {
             ))}
           </ol>
           <img
-            src={notesImage}
+            src={notesFallback}
+            srcSet={notesImage}
+            sizes="(max-width: 768px) 90vw, 560px"
             alt="Oud wood, bergamot, saffron threads, amber resin and dried rose petals laid out in a row"
-            width={1280}
-            height={864}
+            width={800}
+            height={540}
             loading="lazy"
+            decoding="async"
             className="rounded-2xl border border-border object-cover"
           />
+
         </div>
       </section>
       <section id="collection" className="border-t border-border">
@@ -183,13 +210,17 @@ function Index() {
                 className="flex flex-col rounded-2xl border border-border bg-card p-6"
               >
                 <img
-                  src={item.image}
+                  src={item.src}
+                  srcSet={item.srcSet}
+                  sizes="(max-width: 768px) 90vw, 340px"
                   alt={item.alt}
-                  width={1024}
-                  height={1024}
+                  width={600}
+                  height={600}
                   loading="lazy"
+                  decoding="async"
                   className="mx-auto h-56 w-full object-contain"
                 />
+
                 <p className="mt-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">
                   {item.piece}
                 </p>
