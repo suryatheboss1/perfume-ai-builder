@@ -59,7 +59,8 @@ const collection = [
   {
     name: "Sarkar Sovereign",
     piece: "King",
-    image: heroBottle,
+    srcSet: heroBottle,
+    src: heroBottleFallback,
     tagline: "Smoke, saffron and the last hour of a wedding night.",
     notes: "Bergamot - Kashmiri saffron - Assam oud",
     price: "Rs 2,450",
@@ -68,7 +69,8 @@ const collection = [
   {
     name: "Sarkar Knight",
     piece: "Knight",
-    image: knightBottle,
+    srcSet: knightBottle,
+    src: knightFallback,
     tagline: "Cold air, cut grass and leather gloves at dawn.",
     notes: "Grapefruit - vetiver & violet leaf - cedar, leather, smoked incense",
     price: "Rs 2,250",
@@ -77,13 +79,15 @@ const collection = [
   {
     name: "Sarkar Queen",
     piece: "Queen",
-    image: queenBottle,
+    srcSet: queenBottle,
+    src: queenFallback,
     tagline: "Rose held over sandalwood, never raising her voice.",
     notes: "Lychee & mandarin - Taif rose, jasmine, peony - sandalwood, white musk, vanilla",
     price: "Rs 2,350",
     alt: "Sarkar Queen perfume in a blush-rose chess-queen flacon with a gold collar",
   },
 ];
+
 
 function Index() {
   return (
