@@ -203,13 +203,17 @@ function Index() {
                 className="flex flex-col rounded-2xl border border-border bg-card p-6"
               >
                 <img
-                  src={item.image}
+                  src={item.src}
+                  srcSet={item.srcSet}
+                  sizes="(max-width: 768px) 90vw, 340px"
                   alt={item.alt}
-                  width={1024}
-                  height={1024}
+                  width={600}
+                  height={600}
                   loading="lazy"
+                  decoding="async"
                   className="mx-auto h-56 w-full object-contain"
                 />
+
                 <p className="mt-6 text-xs uppercase tracking-[0.3em] text-muted-foreground">
                   {item.piece}
                 </p>
